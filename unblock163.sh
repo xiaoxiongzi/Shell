@@ -522,7 +522,7 @@ _UPDATE_SHELL(){
 # 脚本起始位置
 _CHECK_INFO "OS"
 [[ "${SYSTEM_RELEASE}" != "centos" ]] && [[ "${SYSTEM_RELEASE}" != "debian" ]]  && [[ "${SYSTEM_RELEASE}" != "ubuntu" ]] && echo -e "${ERROR} 本脚本不支持当前系统 ${SYSTEM_RELEASE} !" && exit 1
-[[ "${SYSTEM_BIT}" !=  "x86_64" ]] || [[ "${SYSTEM_BIT}" !=  "aarch64" ]] && echo -e "${ERROR} ${NAME} 的依赖 Node 不支持当前系统位数 ${SYSTEM_BIT} !" && exit 1
+[[ "${SYSTEM_BIT}" !=  "x86_64" ]] && [[ "${SYSTEM_BIT}" !=  "aarch64" ]] && echo -e "${ERROR} ${NAME} 的依赖 Node 不支持当前系统位数 ${SYSTEM_BIT} !" && exit 1
 
 	echo && echo -e "  UnblockNeteaseMusic 一键脚本 ${RED_FONT_PREFIX}[v${NOW_VER_SHELL}]${FONT_COLOR_SUFFIX}
   
